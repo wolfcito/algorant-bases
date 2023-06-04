@@ -1,0 +1,32 @@
+tasks:
+  - name: algokit localnet
+    command: gp sync-await algokit-install && algokit localnet start && exit
+  - name: install algokit
+    init: > 
+      pip install pipx && 
+      pipx install git+https://github.com/joe-p/algokit-cli.git@fb32942 &&
+      gp sync-done algokit-install  &&
+      exit
+vscode:
+  extensions:
+    - ms-python.python
+ports:
+  - name: algod
+    port: 4001
+    visibility: public
+    onOpen: ignore
+  - name: indexer
+    port: 8980
+    visibility: public
+    onOpen: ignore
+  - name: postgres
+    port: 5432
+    onOpen: ignore
+  - name: kmd
+    port: 4002
+    visibility: public
+    onOpen: ignore
+  - name: debug port
+    port: 9392
+    onOpen: ignore
+    visibility: public

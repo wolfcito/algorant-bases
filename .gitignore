@@ -1,0 +1,18 @@
+# TypeScript
+*.tsbuildinfo
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+.DS_Store
+Thumbs.db
