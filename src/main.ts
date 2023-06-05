@@ -1,5 +1,5 @@
-import { createAccount } from './account';
+import { createAccount } from './account'
 
-(async () => {
-  const account = await createAccount();
-})();
+;(async () => {
+  const account = await createAccount()
+})()
