@@ -1,4 +1,5 @@
 import { createAccount, waitForBalance } from './account'
+import { createAsset } from './asset'
 import { algodClient } from './client'
 import { makePayment } from './payment'
 import { waitForInputs } from './utils'
@@ -16,6 +17,7 @@ const main = async () => {
   await makePayment({ sender: account })
 
   await waitForInputs()
+  const asset = await createAsset({ sender: account })
 }
 
 main()
